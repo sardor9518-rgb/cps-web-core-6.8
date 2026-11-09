@@ -1,8 +1,6 @@
 @font-face {
   font-family: "TTLakes";
-  src: url("./TTL/TTLakes-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
+  src: url("/TTL/TTLakes-Regular.ttf") format("truetype");
   font-display: swap;
 }
 
@@ -18,7 +16,7 @@
   margin: 0;
   background: #f8f8f8;
   color: #1b1c21;
-
+  overflow-x: hidden;
 }
 
 .header {
@@ -78,6 +76,7 @@
 
 .services {
   max-width: 1120px;
+  margin: 0 auto;
 }
 
 .services__heading {
@@ -112,8 +111,13 @@
 
 .services-nav__list {
   display: flex;
-  overflow-x: auto;
   list-style: none;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.services-nav__list::-webkit-scrollbar {
+  display: none;
 }
 
 .services-nav__link {
@@ -169,11 +173,6 @@
   display: block;
 }
 
-
-.about__content--state--expanded .about__expand {
-  transform: rotate(180deg);
-}
-
 .about__image {
   display: block;
   width: 100%;
@@ -185,10 +184,13 @@
     display: flex;
   }
 
+  .services__heading {
+    margin: 20px auto;
+  }
+
   .header__divider--position--brand {
     display: block;
   }
-
 
   .about {
     flex-direction: row;
@@ -243,8 +245,8 @@
   }
 
   .services-nav__list {
-    overflow: visible;
     padding: 0 32px;
+    flex-wrap: wrap;
   }
 
 }
